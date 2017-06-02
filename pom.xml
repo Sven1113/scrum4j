@@ -11,6 +11,23 @@
             <artifactId>log4j-core</artifactId>
             <version>2.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit</groupId>
+            <artifactId>junit-commons</artifactId>
+            <version>5.0.0-ALPHA</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>de.hsbochum.fbg.kswe</groupId>
+            <artifactId>scrum4j</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

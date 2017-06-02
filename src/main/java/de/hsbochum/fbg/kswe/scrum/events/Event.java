@@ -28,5 +28,7 @@ public interface Event {
      * @throws InitializationException if the Event could not be initialized
      */
     void init(Event previous, ProductBacklog productBacklog) throws InitializationException;
+
+    public int getPOSITION();
     
 }

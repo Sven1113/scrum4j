@@ -12,6 +12,8 @@ import de.hsbochum.fbg.kswe.scrum.events.SprintRetrospective;
 import de.hsbochum.fbg.kswe.scrum.events.SprintReview;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Assert;
+
 
 /**
  *
@@ -37,6 +39,15 @@ public class Scrum {
             this.currentEvent = event;
         }
         else {
+            if (currentEvent.getPOSITION()+1 == event.getPOSITION() ||
+                    currentEvent.getPOSITION() == 4 && event.getPOSITION() == 1) {
+                previousEvent = currentEvent;
+                currentEvent = event;
+            } else {
+                throw new UnexpectedNextEventException("Reihenfolge falsch");
+            }
+            
+            
             /*
              * TODO implement the assertion of the logical order. Throw an
              * UnexpectedNextEventException if the order is not correct.
