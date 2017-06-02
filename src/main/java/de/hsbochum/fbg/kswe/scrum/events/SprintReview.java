@@ -9,9 +9,15 @@ import de.hsbochum.fbg.kswe.scrum.artifacts.ProductBacklog;
  */
 public class SprintReview implements Event {
 
+    private final int POSITION = 3;
+
+    public int getPOSITION() {
+        return POSITION;
+    }
+    
     @Override
     public Class<? extends Event> followingEventType() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return SprintRetrospective.class;
     }
 
     @Override

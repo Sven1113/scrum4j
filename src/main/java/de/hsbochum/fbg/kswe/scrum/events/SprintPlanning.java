@@ -13,6 +13,12 @@ import java.util.List;
  * @author <a href="mailto:m.rieke@52north.org">Matthes Rieke</a>
  */
 public class SprintPlanning implements Event {
+    
+    private final int POSITION = 1;
+
+    public int getPOSITION() {
+        return POSITION;
+    }
 
     private final List<BacklogItem> items = new ArrayList<>();
     private final int itemCount;
@@ -42,7 +48,7 @@ public class SprintPlanning implements Event {
 
     @Override
     public Class<? extends Event> followingEventType() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return Sprint.class;
     }
 
 }

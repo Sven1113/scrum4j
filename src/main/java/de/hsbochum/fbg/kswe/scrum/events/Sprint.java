@@ -10,6 +10,12 @@ import de.hsbochum.fbg.kswe.scrum.artifacts.SprintBacklog;
  */
 public class Sprint implements Event {
 
+    private final int POSITION = 2;
+
+    public int getPOSITION() {
+        return POSITION;
+    }
+    
     private final SprintBacklog backlog;
     private final int numberOfDays;
 
@@ -29,7 +35,7 @@ public class Sprint implements Event {
 
     @Override
     public Class<? extends Event> followingEventType() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return SprintReview.class;
     }
 
 }

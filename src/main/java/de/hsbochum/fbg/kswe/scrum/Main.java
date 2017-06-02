@@ -23,15 +23,13 @@ public class Main {
             
             scrum.planSprint(2);
             scrum.startSprint(14);
-            
             scrum.reviewSprint();
-            
-            scrum.planSprint(2);
-            scrum.startSprint(10);
-            
             scrum.doSprintRetrospective();
             
             scrum.planSprint(2);
+            scrum.startSprint(14);
+            scrum.reviewSprint();
+            scrum.doSprintRetrospective();
 
         } catch (UnexpectedNextEventException | InitializationException |
                 InvalidSprintPeriodException ex) {
